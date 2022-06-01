@@ -53,13 +53,13 @@ I have chosen to use smart pointers. I've worked with both raw and smart pointer
 
 I have chosen to pass in services needed to objects. There are numerous other approaches such as Singletons and globals. Most methods have some their fans as well as their detractors. I myself have worked with several different methods and personally don't care either way. Provided the solution is well thought through, it will more than likely be usable. I chose this approach just because it would be less controversial than say using a Singletons.
 
-This is a curated experience. I have baked in dates you can go through. Url construction and for that matter request construction is severely dumbed down for this projec†.
+This is a curated experience. I have baked in dates you can go through. Url construction and for that matter request construction is severely dumbed down for this project.
 
 SDL was chosen since it had easy to use font/text support (see Known Issues) and reduced to workload into creating my own rendering system. While it was relatively simple to get up and running, it has its share of limitations.
 
-libcurl was chosen as a relatively barebones simple way to make networks calls. I have not used it previously, so it is possible there are some issues around implemnation.
+libcurl was chosen as a relatively barebones simple way to make networks calls. I have not used it previously, so it is possible there are some issues around implementation.
 
-I chose not to fully parse the JSON feed data. I did create some data structures around what I needed and even parsed some information that was not needed. This was to primarly demonstrate the code is capable of parsing JSON objects and arrays. Rapidjson is used primarily because my last project used it, so it was easy to implement.
+I chosen not to fully parse the JSON feed data. I did create some data structures around what I needed and even parsed some information that was not needed. This was to primarly demonstrate the code is capable of parsing JSON objects and arrays. Rapidjson is used primarily because my last project used it, so it was easy to implement.
 
 I'm using a display list architecture for rendering. This is just one of many approaches. I've simplifed rendering by not supporting sort order (which normally should be done) as well a renderer that does not maintain render state (eg. blend modes, colors, etc). So it is a little wasteful.
 
