@@ -10,7 +10,7 @@ This root directory of this project contains this file, the `xcodeproj` file, an
 # How to Build
 I used Xcode as the build tool. Note that I am familiar with CMake and have my own projects that utilize it to build the server side components. It did not seem practical to create a CMake system since.
 
-I am expecting a reviewer that plans on building the project on the Mac to have knowledge in how to build an Xcode project.
+I am expecting a reviewer that plans on building the project on the Mac to have knowledge in how to build an Xcode project. Note that `3rdParty` contains prebuilts. These are prebuilts I already had on my machine from other projects. They are static libs, so will be built into the project. This project was built on an iMac Pro (Intel).
 
 # How to Run
 The executable provide is the `Debug` configuration. While I did build the `Release` configuration, I haven't really tested it. This is a toy, so right now it isn't doing too much that warrants a `Release` configuration to test against.
