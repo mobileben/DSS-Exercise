@@ -249,8 +249,6 @@ bool GameDate::fromJson(const rapidjson::Value& json) {
                 Game game;
                 if (game.fromJson(*it)) {
                     games.push_back(std::move(game));
-                } else {
-                    return false;
                 }
             }
         } else {
