@@ -7,6 +7,8 @@ Project was created using Xcode ~~11.2 (11B52)~~ 13.2.1 (13C100) on an iMac Pro 
 
 This root directory of this project contains this file, the `xcodeproj` file, and a working executable.
 
+I updated the dates to 2022 dates. The previous dates were from 2018. It looks like the MLB may be removing the editorial data for games played a few years back. Just an FYI if someone tries to run the  code and finds they are getting "There are no available games." for all the dates. You may need to update dates to more recent dates.
+
 # Sample Screenshots
 ![Screenshot 1](screenshots/screenshot0.png)
 ![Screenshot 2](screenshots/screenshot1.png)
