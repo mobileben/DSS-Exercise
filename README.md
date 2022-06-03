@@ -3,14 +3,18 @@ This is the code base for my submission for the "DSS - NCP Engineer - Take Home 
 
 My main goal of the assignment was to illustrate a rough viable working architecture that one may typically run into when implementing such as system. In particular, key elements of a system are creating a multi-threaded environment where resources (eg. feeds, assets) may be downloaded independent of main thread execution. Moreover, parts of the infrastructure also must know how to operate "independent" of said transactions. Less focus is spent on visual layout and visual effects. Due to time constraints, focus on the former was chosen.
 
-Project was created using Xcode 11.2 (11B52) on an iMac Pro 10 core running OSX 10.14.6. There are 3 main directories in the project directory. `3rdParty`, `executable`, and `DSS-Exercise`. `3rdParty` contains all the built 3rd Party libs in use. They were either built using `./configure`, `git clone`'d (in the case of header only libs), or copied from my filesystem (`openssl`). `executable` contains the executable and a directory called `baked`. That directory is required to be in the same directory as the executable. As the executable run is coded to get the current working directory and then append `baked` and then any baked asset to the path. `DSS-Exercise` contains all the source code.
+Project was created using Xcode ~~11.2 (11B52)~~ 13.2.1 (13C100) on an iMac Pro 10 core running OSX ~~10.14.6~~ 11.6. There are 3 main directories in the project directory. `3rdParty`, `executable`, and `DSS-Exercise`. `3rdParty` contains all the built 3rd Party libs in use. They were either built using `./configure`, `git clone`'d (in the case of header only libs), or copied from my filesystem (`openssl`). `executable` contains the executable and a directory called `baked`. That directory is required to be in the same directory as the executable. As the executable run is coded to get the current working directory and then append `baked` and then any baked asset to the path. `DSS-Exercise` contains all the source code.
 
 This root directory of this project contains this file, the `xcodeproj` file, and a working executable.
+
+# Sample Screenshots
+![Screenshot 1](screenshots/screenshot0.png)
+![Screenshot 2](screenshots/screenshot1.png)
 
 # How to Build
 I used Xcode as the build tool. Note that I am familiar with CMake and have my own projects that utilize it to build the server side components. It did not seem practical to create a CMake system since.
 
-I am expecting a reviewer that plans on building the project on the Mac to have knowledge in how to build an Xcode project. Note that `3rdParty` contains prebuilts. These are prebuilts I already had on my machine from other projects. They are static libs, so will be built into the project. This project was built on an iMac Pro (Intel).
+I am expecting a reviewer that plans on building the project on the Mac to have knowledge in how to build an Xcode project. Note that `3rdParty` contains prebuilts. These are prebuilts I already had on my machine from other projects. They are static libs, so will be built into the project.
 
 # How to Run
 The executable provide is the `Debug` configuration. While I did build the `Release` configuration, I haven't really tested it. This is a toy, so right now it isn't doing too much that warrants a `Release` configuration to test against.
