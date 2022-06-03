@@ -22,13 +22,13 @@ FeedService::FeedService(const std::shared_ptr<ResourceFetcherService>& fetcher,
     descriptionFont_ = FontTextService::Font::Roboto20;
     
     dates_ = {
-        "2018-06-07",
-        "2018-06-08",
-        "2018-06-09",
-        "2018-06-10",
-        "2018-06-11",
-        "2018-06-12",
-        "2018-06-13"
+        "2022-05-01",
+        "2022-05-02",
+        "2022-05-03",
+        "2022-05-04",
+        "2022-05-05",
+        "2022-05-06",
+        "2022-05-07"
     };
     
     defaultDateIndex_ = static_cast<int32_t>(dates_.size() / 2);
