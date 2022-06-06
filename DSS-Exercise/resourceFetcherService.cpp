@@ -62,7 +62,17 @@ void ResourceFetcherService::Job::execute() {
                 }
             } else {
                 // Network
+                if (verbose_) {
+                    std::cout << "Fetching " << url_ << std::endl;
+                }
                 auto [error, status, output] = fetchFile();
+                if (verbose_) {
+                    std::cout << "Done: " << url_ << std::endl;
+                    std::string out(output.begin(), output.end());
+                    std::cout << "Error: " << static_cast<uint32_t>(error) << std::endl;
+                    std::cout << "Status: " << status << std::endl;
+                    std::cout << out << std::endl;
+                }
                 if (callback_) {
                     callback_(error, status, output);
                 }
