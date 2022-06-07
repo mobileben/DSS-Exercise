@@ -14,7 +14,9 @@
 
 #include <iostream>
 
-static const std::string kBaseFeedUrl = "http://statsapi.mlb.com/api/v1/schedule?hydrate=game(content(editorial(recap))),decisions&date=";
+// At the time of this update, the MLB API hydration for `game(content(editorial(recap)))` is broken, returning a "Internal error occurred". I found that using `editorial(all)` will work, though it returns a much larger payload.
+//static const std::string kBaseFeedUrl = "http://statsapi.mlb.com/api/v1/schedule?hydrate=game(content(editorial(recap))),decisions&date=";
+static const std::string kBaseFeedUrl = "http://statsapi.mlb.com/api/v1/schedule?hydrate=game(content(editorial(all))),decisions&date=";
 static const std::string kTrailingFeedQueryParam = "&sportId=1";
 
 FeedService::FeedService(const std::shared_ptr<ResourceFetcherService>& fetcher, const std::shared_ptr<TextureService>& texService, const std::shared_ptr<FontTextService>& fontTextService, int wrapLimit, bool verbose) : fetcher_(fetcher), textureService_(texService), fontTextService_(fontTextService), wrapLimit_(wrapLimit), verbose_(verbose) {

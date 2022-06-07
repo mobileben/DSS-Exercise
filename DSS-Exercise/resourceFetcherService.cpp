@@ -67,11 +67,17 @@ void ResourceFetcherService::Job::execute() {
                 }
                 auto [error, status, output] = fetchFile();
                 if (verbose_) {
-                    std::cout << "Done: " << url_ << std::endl;
-                    std::string out(output.begin(), output.end());
-                    std::cout << "Error: " << static_cast<uint32_t>(error) << std::endl;
-                    std::cout << "Status: " << status << std::endl;
-                    std::cout << out << std::endl;
+                    // Don't output images
+                    const std::string jpg = "jpg";
+                    if (url_.length() > jpg.length()) {
+                        if (url_.rfind(jpg) != (url_.size() - jpg.size())) {
+                            const std::string out(output.begin(), output.end());
+                            std::cout << "Done: " << url_ << std::endl;
+                            std::cout << "Error: " << static_cast<uint32_t>(error) << std::endl;
+                            std::cout << "Status: " << status << std::endl;
+                            std::cout << out << std::endl;
+                        }
+                    }
                 }
                 if (callback_) {
                     callback_(error, status, output);
