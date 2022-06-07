@@ -9,6 +9,17 @@ This root directory of this project contains this file, the `xcodeproj` file, an
 
 I updated the dates to 2022 dates. The previous dates were from 2018. It looks like the MLB may be removing the editorial data for games played a few years back. Just an FYI if someone tries to run the  code and finds they are getting "There are no available games." for all the dates. You may need to update dates to more recent dates.
 
+Note it also looks like right now, the API is emitting an 500 error with the following payload. Will revisit, but it isn't clear what the issue is. The format for the urls to use came from DSS.
+
+```
+{
+  "messageNumber" : 1,
+  "message" : "Internal error occurred",
+  "timestamp" : "2022-06-06T21:28:41.742478Z",
+  "traceId" : "5354dd0605a6af0e5fffc8cc55425631"
+}
+```
+
 # Sample Screenshots
 ![Screenshot 1](screenshots/screenshot0.png)
 ![Screenshot 2](screenshots/screenshot1.png)
